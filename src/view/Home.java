@@ -24,7 +24,7 @@ public class Home extends javax.swing.JPanel {
         this.d = d;
         logoutButton.setVisible(false);
         setFocusable(true);
-        
+
     }
 
     /**
@@ -105,23 +105,9 @@ public class Home extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
-        // TODO add your handling code here:
         String search = searchTF.getText();
-        String termSearch = searchTF.getText();
-        List<String> list = d.controller.search(termSearch);
-        if (list != null) {
-            String res = "";
-            int length = list.size()-1;
-            for (int i = 0; i < length; i++) {
-                res += list.get(i);
-                res += "\n";
-            }
-            res += list.get(length);
-            d.show.setSearch(search);
-            this.searchTF.setText("");
-        } else {
-            d.show.setNoDefinition();
-        }
+        d.show.search(search);
+        this.searchTF.setText("");
         d.enter(2);
     }//GEN-LAST:event_searchButtonActionPerformed
 
@@ -139,44 +125,32 @@ public class Home extends javax.swing.JPanel {
     private void formKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyPressed
         if (!d.login.isLogin) {
             if (evt.isControlDown() && evt.isShiftDown() && evt.getKeyCode() == KeyEvent.VK_L) {
-                System.out.println("true!!!!!!!!!!!!!!");
                 d.enter(0);
             }
         }
-        if (evt.getKeyCode() == KeyEvent.VK_ENTER){
-            searchButton.doClick();
-        }
-            
     }//GEN-LAST:event_formKeyPressed
 
     private void searchTFKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_searchTFKeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-//            String search = searchTF.getText();
-            String termSearch = searchTF.getText();
-            if (d.controller.isExist(termSearch)) {
-                List<String> list = d.controller.search(termSearch);
-                String res = "";
-                for (int i = 0; i < list.size(); i++) {
-                    res += list.get(i);
-                    res += "\n";
-                }
-                d.show.setSearch(termSearch);
-            } else {
-                d.show.setNoDefinition();
-            }
+            String search = searchTF.getText();
+            d.show.search(search);
             this.searchTF.setText("");
             d.enter(2);
+        }
+        if (!d.login.isLogin) {
+            if (evt.isControlDown() && evt.isShiftDown() && evt.getKeyCode() == KeyEvent.VK_L) {
+                d.enter(0);
+            }
         }
     }//GEN-LAST:event_searchTFKeyPressed
 
     void checkedLogin() {
         if (d.login.isLogin) {
-            System.out.println("tweirutoieshkjth");
             logoutButton.setVisible(true);
         }
     }
-    
-    
+
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JButton logoutButton;

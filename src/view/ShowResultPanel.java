@@ -78,14 +78,9 @@ public class ShowResultPanel extends javax.swing.JPanel {
             }
         });
         add(editButton);
-        editButton.setBounds(240, 230, 53, 23);
+        editButton.setBounds(240, 230, 51, 23);
 
         searchTF1.setEditable(false);
-        searchTF1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                searchTF1ActionPerformed(evt);
-            }
-        });
         add(searchTF1);
         searchTF1.setBounds(28, 60, 151, 30);
 
@@ -117,7 +112,7 @@ public class ShowResultPanel extends javax.swing.JPanel {
             }
         });
         add(addButton);
-        addButton.setBounds(180, 230, 53, 23);
+        addButton.setBounds(180, 230, 51, 23);
 
         jLabel2.setText("Definition");
         add(jLabel2);
@@ -142,13 +137,19 @@ public class ShowResultPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void removeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeButtonActionPerformed
-        Object[] options = {"OK"};
-        if (JOptionPane.showConfirmDialog(null, "Are you sure?", "Confirm removing term",
-                JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
-            JOptionPane.showOptionDialog(d,"Your term has been removed! ","MESSAGE",JOptionPane.PLAIN_MESSAGE,JOptionPane.QUESTION_MESSAGE,
-                   null,options,options[0]);
-        } else {
-            
+        String removeTerm = searchTF1.getText();
+        if (d.controller.isExist(removeTerm)) {
+            Object[] options = {"OK"};
+            if (JOptionPane.showConfirmDialog(null, "Are you sure?", "Confirm removing term",
+                    JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
+                d.controller.remove(removeTerm);
+                this.searchGeneral();
+                this.searchTF1.setText(removeTerm);
+                JOptionPane.showOptionDialog(d, "Your term has been removed! ", "Success!", JOptionPane.PLAIN_MESSAGE, JOptionPane.QUESTION_MESSAGE,
+                        null, options, options[0]);
+
+            } else {
+            }
         }
     }//GEN-LAST:event_removeButtonActionPerformed
 
@@ -158,14 +159,16 @@ public class ShowResultPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_addButtonActionPerformed
 
     private void editButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editButtonActionPerformed
-        String term = searchTF1.getText();
-        String definition = definitionTA.getText();
-        d.edit.setterIsi(term, definition);
-        d.enter(4);
+        String edit = searchTF1.getText();
+        if (d.controller.isExist(edit)) {
+            String term = searchTF1.getText();
+            String definition = definitionTA.getText();
+            d.edit.setterIsi(term, definition);
+            d.enter(4);
+        }
     }//GEN-LAST:event_editButtonActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
         d.enter(0);
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -180,23 +183,8 @@ public class ShowResultPanel extends javax.swing.JPanel {
         d.enter(1);
     }//GEN-LAST:event_logoutButtonActionPerformed
 
-    private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
-        String termSearch = searchTF.getText();
-        searchTF1.setText(termSearch);
-        List<String> list = d.controller.search(termSearch);
-        String res = "";
-        for (int i = 0; i < list.size(); i++) {
-            res += list.get(i);
-            res += "\n";
-        }
-        definitionTA.setText(res);
-        definitionTA.setLineWrap(true);
-        searchTF.setText("");
-    }//GEN-LAST:event_searchButtonActionPerformed
-
-    private void searchTFKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_searchTFKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-            String termSearch = searchTF.getText();
+    public void search(String termSearch) {
+        if (d.controller.isExist(termSearch)) {
             searchTF1.setText(termSearch);
             List<String> list = d.controller.search(termSearch);
             String res = "";
@@ -206,39 +194,49 @@ public class ShowResultPanel extends javax.swing.JPanel {
             }
             definitionTA.setText(res);
             definitionTA.setLineWrap(true);
-            searchTF.setText("");
+        } else {
+
+            this.setNoDefinition(termSearch);
+        }
+        this.searchTF1.setText(termSearch);
+        searchTF.setText("");
+    }
+
+    public void searchGeneral() {
+        String termSearch = searchTF.getText();
+        if (d.controller.isExist(termSearch)) {
+            searchTF1.setText(termSearch);
+            List<String> list = d.controller.search(termSearch);
+            String res = "";
+            for (int i = 0; i < list.size(); i++) {
+                res += list.get(i);
+                res += "\n";
+            }
+            definitionTA.setText(res);
+            definitionTA.setLineWrap(true);
+        } else {
+
+            this.setNoDefinition(termSearch);
+        }
+        this.searchTF1.setText(termSearch);
+        searchTF.setText("");
+    }
+    private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
+        this.searchGeneral();
+    }//GEN-LAST:event_searchButtonActionPerformed
+
+    private void searchTFKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_searchTFKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            this.searchGeneral();
         }
     }//GEN-LAST:event_searchTFKeyPressed
 
-    private void searchTF1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchTF1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_searchTF1ActionPerformed
 
-    public void setSearch(String searchTerm) {
-        List<String> list = d.controller.search(searchTerm);
-        String res = "";
-        for (int i = 0; i < list.size(); i++) {
-            res += list.get(i);
-            res += "\n";
-        }
-        this.definitionTA.setText(res);
-        this.definitionTA.setLineWrap(true);
-        this.searchTF1.setText(searchTerm);
-    }
-
-    public void keyReleased(KeyEvent e) {
-        int keyCode = e.getKeyCode();
-        switch (keyCode) {
-            case KeyEvent.VK_SHIFT + KeyEvent.VK_CONTROL + KeyEvent.VK_L:
-                d.enter(0);
-                break;
-        }
-    }
-
-    public void setNoDefinition ()
-    {
+    public void setNoDefinition(String noDefinition) {
+        this.searchTF1.setText(noDefinition);
         this.definitionTA.setText("Istilah yang Anda cari tidak dapat ditemukan!");
     }
+
     void checkedLogin() {
         if (d.login.isLogin) {
             logoutButton.setVisible(true);

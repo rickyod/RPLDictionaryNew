@@ -113,8 +113,8 @@ public class AddPanel extends javax.swing.JPanel {
         }
         d.controller.add(termBaru, definition);
         d.enter(2);
-        d.show.setSearch(termBaru);
-        JOptionPane.showOptionDialog(d,"Your term has been added! ","MESSAGE",JOptionPane.PLAIN_MESSAGE,JOptionPane.QUESTION_MESSAGE,
+        d.show.search(termBaru);
+        JOptionPane.showOptionDialog(d,"Your term has been added! ","Success!",JOptionPane.PLAIN_MESSAGE,JOptionPane.QUESTION_MESSAGE,
                    null,options,options[0]);
     }//GEN-LAST:event_jButton1ActionPerformed
 

@@ -124,10 +124,9 @@ public class EditPanel extends javax.swing.JPanel {
             }
             d.controller.edit(d.show.getWord(), termBaru, definition);
             d.enter(2);
-            d.show.setSearch(termBaru);
-            JOptionPane.showOptionDialog(d,"Your changes has been saved ","MESSAGE",JOptionPane.PLAIN_MESSAGE,JOptionPane.QUESTION_MESSAGE,
+            d.show.search(termBaru);
+            JOptionPane.showOptionDialog(d,"Your changes has been saved ","Success!",JOptionPane.PLAIN_MESSAGE,JOptionPane.QUESTION_MESSAGE,
                    null,options,options[0]);
-            
         } else {
             d.enter(2);
         }

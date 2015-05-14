@@ -4,6 +4,7 @@ import Controller.DictionaryController;
 import static com.sun.java.accessibility.util.AWTEventMonitor.addWindowListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import javax.swing.JFrame;
 import model.DictionaryFileWriter;
 
 /*
@@ -59,8 +60,7 @@ public class DictFrame extends javax.swing.JFrame {
             jPanel1.add(login);
         }
         else if(x == 1){
-            home.checkedLogin();
-            
+            home.checkedLogin();    
             jPanel1.add(home);
             home.requestFocus();
         }
@@ -138,8 +138,13 @@ public class DictFrame extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
-                new DictFrame().setVisible(true);
+//                new DictFrame().setVisible(true);
+                JFrame frame=new DictFrame();
+                frame.pack();
+                frame.setLocationRelativeTo(null);
+                frame.setVisible(true);
             }
         });
     }
