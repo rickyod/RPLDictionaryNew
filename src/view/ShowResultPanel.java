@@ -142,11 +142,13 @@ public class ShowResultPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void removeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeButtonActionPerformed
+        Object[] options = {"OK"};
         if (JOptionPane.showConfirmDialog(null, "Are you sure?", "Confirm removing term",
                 JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
-            System.out.println("day");
+            JOptionPane.showOptionDialog(d,"Your term has been removed! ","MESSAGE",JOptionPane.PLAIN_MESSAGE,JOptionPane.QUESTION_MESSAGE,
+                   null,options,options[0]);
         } else {
-            System.out.println("aaaaaaaa");
+            
         }
     }//GEN-LAST:event_removeButtonActionPerformed
 

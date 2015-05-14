@@ -1,6 +1,7 @@
 package view;
 
 import java.awt.event.KeyEvent;
+import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
@@ -25,7 +26,6 @@ public class LoginPanel extends javax.swing.JPanel {
         initComponents();
         this.d = d;
         isLogin = false;
-        salahLabel.setVisible(false);
     }
 
     /**
@@ -42,7 +42,6 @@ public class LoginPanel extends javax.swing.JPanel {
         loginButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         passTxtField = new javax.swing.JPasswordField();
-        salahLabel = new javax.swing.JLabel();
         resetButton = new javax.swing.JButton();
         backButton = new javax.swing.JButton();
 
@@ -61,7 +60,7 @@ public class LoginPanel extends javax.swing.JPanel {
             }
         });
         add(loginButton);
-        loginButton.setBounds(160, 210, 66, 23);
+        loginButton.setBounds(120, 190, 66, 23);
 
         jLabel1.setText("Username");
         add(jLabel1);
@@ -75,10 +74,6 @@ public class LoginPanel extends javax.swing.JPanel {
         add(passTxtField);
         passTxtField.setBounds(160, 130, 150, 30);
 
-        salahLabel.setText("Username atau Password salah!");
-        add(salahLabel);
-        salahLabel.setBounds(120, 170, 200, 14);
-
         resetButton.setText("Reset");
         resetButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,7 +81,7 @@ public class LoginPanel extends javax.swing.JPanel {
             }
         });
         add(resetButton);
-        resetButton.setBounds(240, 210, 70, 23);
+        resetButton.setBounds(200, 190, 70, 23);
 
         backButton.setText("Back");
         backButton.addActionListener(new java.awt.event.ActionListener() {
@@ -95,21 +90,24 @@ public class LoginPanel extends javax.swing.JPanel {
             }
         });
         add(backButton);
-        backButton.setBounds(10, 10, 57, 23);
+        backButton.setBounds(10, 10, 55, 23);
     }// </editor-fold>//GEN-END:initComponents
 
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
         // TODO add your handling code here:
         String username = unameTxtField.getText();
         char[] pass = passTxtField.getPassword();
+        Object[] options = {"OK"};
         if (username.equals("")) {
-            salahLabel.setVisible(true);
+            JOptionPane.showOptionDialog(d,"Username / Password salah! ","WARNING",JOptionPane.PLAIN_MESSAGE,JOptionPane.QUESTION_MESSAGE,
+                   null,options,options[0]);
         } else {
             if (d.controller.login(username, pass)) {
                 this.isLogin = true;
                 d.enter(1);
             } else {
-                salahLabel.setVisible(true);
+                JOptionPane.showOptionDialog(d,"Username / Password salah! ","WARNING",JOptionPane.PLAIN_MESSAGE,JOptionPane.QUESTION_MESSAGE,
+                   null,options,options[0]);
             }
         }
 
@@ -123,26 +121,27 @@ public class LoginPanel extends javax.swing.JPanel {
     private void resetButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetButtonActionPerformed
         unameTxtField.setText("");
         passTxtField.setText("");
-        salahLabel.setVisible(false);
     }//GEN-LAST:event_resetButtonActionPerformed
 
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
-        
         d.enter(1);
     }//GEN-LAST:event_backButtonActionPerformed
 
     private void passTxtFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_passTxtFieldKeyPressed
+        Object[] options = {"OK"};
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             String username = unameTxtField.getText();
             char[] pass = passTxtField.getPassword();
             if (username.equals("")) {
-                salahLabel.setVisible(true);
+                JOptionPane.showOptionDialog(d,"Username / Password salah! ","WARNING",JOptionPane.PLAIN_MESSAGE,JOptionPane.QUESTION_MESSAGE,
+                   null,options,options[0]);
             } else {
                 if (d.controller.login(username, pass)) {
                     this.isLogin = true;
                     d.enter(1);
                 } else {
-                    salahLabel.setVisible(true);
+                   JOptionPane.showOptionDialog(d,"Username / Password salah! ","WARNING",JOptionPane.PLAIN_MESSAGE,JOptionPane.QUESTION_MESSAGE,
+                   null,options,options[0]);
                 }
             }
         }
@@ -156,7 +155,6 @@ public class LoginPanel extends javax.swing.JPanel {
     private javax.swing.JButton loginButton;
     private javax.swing.JPasswordField passTxtField;
     private javax.swing.JButton resetButton;
-    private javax.swing.JLabel salahLabel;
     private javax.swing.JTextField unameTxtField;
     // End of variables declaration//GEN-END:variables
 }

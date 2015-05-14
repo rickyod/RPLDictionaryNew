@@ -1,6 +1,7 @@
 package view;
 
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -103,7 +104,7 @@ public class AddPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        Object[] options = {"OK"};
         String termBaru = wordTF.getText();
         ArrayList<String> definition = new ArrayList<>();
         String[] defs = definitionTA.getText().split("\n");
@@ -113,6 +114,8 @@ public class AddPanel extends javax.swing.JPanel {
         d.controller.add(termBaru, definition);
         d.enter(2);
         d.show.setSearch(termBaru);
+        JOptionPane.showOptionDialog(d,"Your term has been added! ","MESSAGE",JOptionPane.PLAIN_MESSAGE,JOptionPane.QUESTION_MESSAGE,
+                   null,options,options[0]);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

@@ -113,7 +113,7 @@ public class EditPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void saveChangesButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveChangesButtonActionPerformed
-        // TODO add your handling code here:
+        Object[] options = {"OK"};
         if (JOptionPane.showConfirmDialog(null, "Are you sure?", "Confirm editing term",
                 JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
             String termBaru = wordTF.getText();
@@ -125,8 +125,11 @@ public class EditPanel extends javax.swing.JPanel {
             d.controller.edit(d.show.getWord(), termBaru, definition);
             d.enter(2);
             d.show.setSearch(termBaru);
+            JOptionPane.showOptionDialog(d,"Your changes has been saved ","MESSAGE",JOptionPane.PLAIN_MESSAGE,JOptionPane.QUESTION_MESSAGE,
+                   null,options,options[0]);
+            
         } else {
-
+            d.enter(2);
         }
 
     }//GEN-LAST:event_saveChangesButtonActionPerformed
