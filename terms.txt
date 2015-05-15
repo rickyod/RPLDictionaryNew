@@ -1,12 +1,84 @@
+Antipattern
+-
+Sebuah pattern tertentu dalam pengembangan perangkat lunak yang dianggap pemrograman yang buruk. 
+*
+swimlanes
+-
+Menggambarkan interaksi dari beberapa bagian yang berbeda yang terlibat dalam sebuah proses
+*
+pattern
+-
+solusi umum yang dapat digunakan kembali pada permasalahan umum yang sering terjadi pada software design
+*
+Aggregation
+-
+Sebuah hubungan antara kelas-kelas objek dimana satu objek menggunakan objek lainnya
+*
+Time-sharing
+-
+Satu komputer yang mampu mendukung banyak user dan meningkatkan keluaran (throughput) dari sistem 
+*
+Deadlock
+-
+Keadaan dimana dua program memegang kontrol terhadap sumber daya yang dibutuhkan oleh program yang lain. Tidak ada yang dapat melanjutkan proses masing-masing sampai program yang lain memberikan sumber dayanya, tetapi tidak ada yang mengalah
+*
+Error
+-
+Suatu program tidak dapat bekerja dengan optimal atau program yang salah dalam menjalankan suatu perintah
+*
+class variable
+-
+atribut yang dimiliki oleh semua object yang berasal dari class yang sama, serta semua object memiliki nilai class variabel yang sama. atribut yang dimiliki object dari class yang sama.
+*
+Coupling
+-
+Cara dan tingkat dari ketergantungan antara modul software , semakin besar relasi antara modul , semakin besar coupling nya
+*
+flexibility
+-
+Menyediakan banyak cara bagi user dan sistem untuk bertukar informasi 
+*
+Composition
+-
+Sebuah hubungan antara kelas-kelas objek dimana satu objek sangat berpengaruh dengan objek lainnya dan tidak akan berjalan tanpa objek tersebut.
+*
 state diagram
 -
 menggambarkan urutan keadaan yang dilalui object dalam suatu kelas, karena suatu kejadian menyebabkan suatu perpindahan aktivitas/state
+*
+Design
+-
+Sebuah proses pemecahan masalah yang tujuannya mencari dan menjelaskan cara; untuk mengimplementasi kebutuhan fungsional sistem , sambil menghormati kendala yang diberikan oleh kualitas , platform dan kebutuhan proses , dan juga berpegang pada prinsip-prinsip umum dari kualitas yang baik.
+*
+rendezvous
+-
+Jenis konkurensi di mana terdapat banyak transisi yang masuk dan banyak transisi keluar
 *
 refinement
 -
 Penjelasan detil dari abstraction
 -
 membantu designer untuk memperlihatkan detil dari lowest level dari abstraction
+*
+Application Programming Interface (API)
+-
+Seperangkat rutinitas , protokol , dan alat-alat untuk membangun aplikasi perangkat lunak.
+*
+join
+-
+Jenis konkurensi di mana terdapat banyak transisi yang masuk dan satu transisi keluar
+*
+Livelock
+-
+Situasi dimana dua atau lebih proses secara kontinu merubah state sebagai respon tanpa melakukan suatu pekerjaan
+*
+ortogonal
+-
+Substate yang terjadi secara paralel
+*
+sequence diagram
+-
+suatu diagram yang menggambarkan interaksi antar obyek dan mengindikasikan komunikasi diantara obyek-obyek tersebut
 *
 Hardware
 -
@@ -298,101 +370,63 @@ peralatan komputer dan device yang digunakan untuk proses, store, atau
 -
 Kemampuan yang dimiliki dua atau lebih sistem atau komponen untuk melakukan fungsi yang diperlukan dengan berbagi hardware atau software yang sama secara sementara
 *
-Coupling
--
-Cara dan tingkat dari ketergantungan antara modul software , semakin besar relasi antara modul , semakin besar coupling nya
-*
-Time-sharing
--
-Satu komputer yang mampu mendukung banyak user dan meningkatkan keluaran (throughput) dari sistem 
-*
-sequence diagram
--
-suatu diagram yang menggambarkan interaksi antar obyek dan mengindikasikan komunikasi diantara obyek-obyek tersebut
-*
-Unified Modeling Language (UML)
--
-Bahasa pemodelan di bidang rekayasa perangkat lunak , yang dirancang untuk menyediakan standar untuk memvisualisasikan desain sebuah sistem.
-*
-adaptability
--
-Adaptasi menyangkut perubahan sistem agar sesuai dengan kebutuhan pengguna tanpa harus mengubah dari satu komputer ke komputer lain
-*
 Algorithm
 -
 kumpulan dari aturan-aturan yang telah didefinisikan dengan baik untuk solusi ke sebuah masalah dengan langkah yang terbatas
-*
-Dependency
--
-Sebuah hubungan ketergantungan antara kelas dan kelas lainnya.
-*
-Application Programming Interface (API)
--
-Seperangkat rutinitas , protokol , dan alat-alat untuk membangun aplikasi perangkat lunak.
-*
-SRS (Software Requirements Specification)
--
-Dokumen yang menjelaskan tentang berbagai kebutuhan yang harus dipenuhi oleh suatu software
-*
-Object Constraint Language (OCL)
--
-Sebuah bahasa deklaratif untuk menggambarkan aturan yang berlaku untuk model Unified Modeling Language (UML).
-*
-concurrency
--
-Proses-proses (lebih dari satu proses) yang terjadi pada saat bersamaan
-*
-Composition
--
-Sebuah hubungan antara kelas-kelas objek dimana satu objek sangat berpengaruh dengan objek lainnya dan tidak akan berjalan tanpa objek tersebut.
-*
-flexibility
--
-Menyediakan banyak cara bagi user dan sistem untuk bertukar informasi 
 *
 Race condition
 -
 Situasi di mana beberapa proses mengakses dan memanipulasi data bersama pada saat bersamaan
 *
-Deadlock
+DFD
 -
-Keadaan dimana dua program memegang kontrol terhadap sumber daya yang dibutuhkan oleh program yang lain. Tidak ada yang dapat melanjutkan proses masing-masing sampai program yang lain memberikan sumber dayanya, tetapi tidak ada yang mengalah
+Suatu cara atau metode untuk membuat rancangan sebuah sistem yang mana berorientasi pada alur data yang bergerak pada sebuah sistem
 *
-swimlanes
+Dependency
 -
-Menggambarkan interaksi dari beberapa bagian yang berbeda yang terlibat dalam sebuah proses
-*
-rendezvous
--
-Jenis konkurensi di mana terdapat banyak transisi yang masuk dan banyak transisi keluar
-*
-Antipattern
--
-Sebuah pattern tertentu dalam pengembangan perangkat lunak yang dianggap pemrograman yang buruk. 
-*
-fork
--
-Jenis konkurensi di mana terdapat satu transisi yang masuk dan banyak transisi keluar
-*
-Error
--
-Suatu program tidak dapat bekerja dengan optimal atau program yang salah dalam menjalankan suatu perintah
+Sebuah hubungan ketergantungan antara kelas dan kelas lainnya.
 *
 Generalisations
 -
 Sebuah hubungan antara suatu kelas yang menjadi umum dari kelas-kelas yang spesifik.
 *
-Livelock
+Abstraction
 -
-Situasi dimana dua atau lebih proses secara kontinu merubah state sebagai respon tanpa melakukan suatu pekerjaan
+Sebuah hubungan antara kelas dengan kelas lainnya , dimana kelas yang berada di bawah kelas abstrak menjadi lebih kompleks.
 *
-Assosiation
+adaptability
 -
-Sebuah hubungan antara kelas-kelas objek yang memungkinkan satu objek untuk melakukan sebuah aksi pada objek tersebut.
+Adaptasi menyangkut perubahan sistem agar sesuai dengan kebutuhan pengguna tanpa harus mengubah dari satu komputer ke komputer lain
 *
-join
+SRS (Software Requirements Specification)
 -
-Jenis konkurensi di mana terdapat banyak transisi yang masuk dan satu transisi keluar
+Dokumen yang menjelaskan tentang berbagai kebutuhan yang harus dipenuhi oleh suatu software
+*
+dede
+-
+dsjkfhjkdshfe
+*
+concurrency
+-
+Proses-proses (lebih dari satu proses) yang terjadi pada saat bersamaan
+*
+fork
+-
+Jenis konkurensi di mana terdapat satu transisi yang masuk dan banyak transisi keluar
+*
+Unified Modeling Language (UML)
+-
+Bahasa pemodelan di bidang rekayasa perangkat lunak , yang dirancang untuk menyediakan standar untuk memvisualisasikan desain sebuah sistem.
+*
+Failure
+-
+Ketidakmampuan sistem atau komponen untuk melaksanakan fungsi-fungsi yang diperlukan dalam kinerja ditentukan
+*
+activity diagram
+-
+representasi grafis dari seluruh tahapan alur kerja
+-
+diagram yg mengandung aktivitas, pilihan tindakan, perulangan dan hasil dari aktivitas tersebut
 *
 Forces
 -
@@ -408,46 +442,12 @@ Pengotomasisasian dari methodologi untuk software dan pengembangan sistem untuk 
 -
 aplikasi ini, atau membantu para developer untuk menemukan bug atau root dari sebuah method
 *
-Aggregation
+Assosiation
 -
-Sebuah hubungan antara kelas-kelas objek dimana satu objek menggunakan objek lainnya
+Sebuah hubungan antara kelas-kelas objek yang memungkinkan satu objek untuk melakukan sebuah aksi pada objek tersebut.
 *
-dede
+Object Constraint Language (OCL)
 -
-dsjkfhjkdshfe
-*
-DFD
--
-Suatu cara atau metode untuk membuat rancangan sebuah sistem yang mana berorientasi pada alur data yang bergerak pada sebuah sistem
-*
-Failure
--
-Ketidakmampuan sistem atau komponen untuk melaksanakan fungsi-fungsi yang diperlukan dalam kinerja ditentukan
-*
-class variable
--
-atribut yang dimiliki oleh semua object yang berasal dari class yang sama, serta semua object memiliki nilai class variabel yang sama. atribut yang dimiliki object dari class yang sama.
-*
-pattern
--
-solusi umum yang dapat digunakan kembali pada permasalahan umum yang sering terjadi pada software design
-*
-ortogonal
--
-Substate yang terjadi secara paralel
-*
-Abstraction
--
-Sebuah hubungan antara kelas dengan kelas lainnya , dimana kelas yang berada di bawah kelas abstrak menjadi lebih kompleks.
-*
-activity diagram
--
-representasi grafis dari seluruh tahapan alur kerja
--
-diagram yg mengandung aktivitas, pilihan tindakan, perulangan dan hasil dari aktivitas tersebut
-*
-Design
--
-Sebuah proses pemecahan masalah yang tujuannya mencari dan menjelaskan cara; untuk mengimplementasi kebutuhan fungsional sistem , sambil menghormati kendala yang diberikan oleh kualitas , platform dan kebutuhan proses , dan juga berpegang pada prinsip-prinsip umum dari kualitas yang baik.
+Sebuah bahasa deklaratif untuk menggambarkan aturan yang berlaku untuk model Unified Modeling Language (UML).
 *
 *****

@@ -236,9 +236,13 @@ public class ShowResultPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_searchButtonActionPerformed
 
     private void searchTFKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_searchTFKeyPressed
-        this.requestFocus();
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             this.searchGeneral();
+        }
+        if (!d.login.isLogin) {
+            if (evt.isControlDown() && evt.isShiftDown() && evt.getKeyCode() == KeyEvent.VK_L) {
+                d.enter(0);
+            }
         }
     }//GEN-LAST:event_searchTFKeyPressed
 
