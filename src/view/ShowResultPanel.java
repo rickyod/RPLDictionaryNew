@@ -43,7 +43,7 @@ public class ShowResultPanel extends javax.swing.JPanel {
         jButton1 = new javax.swing.JButton();
         removeButton = new javax.swing.JButton();
         editButton = new javax.swing.JButton();
-        searchTF1 = new javax.swing.JTextField();
+        wordTF = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         searchTF = new javax.swing.JTextField();
         searchButton = new javax.swing.JButton();
@@ -80,9 +80,9 @@ public class ShowResultPanel extends javax.swing.JPanel {
         add(editButton);
         editButton.setBounds(240, 230, 51, 23);
 
-        searchTF1.setEditable(false);
-        add(searchTF1);
-        searchTF1.setBounds(28, 60, 151, 30);
+        wordTF.setEditable(false);
+        add(wordTF);
+        wordTF.setBounds(28, 60, 151, 30);
 
         jLabel1.setText("Word");
         add(jLabel1);
@@ -137,14 +137,14 @@ public class ShowResultPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void removeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeButtonActionPerformed
-        String removeTerm = searchTF1.getText();
+        String removeTerm = wordTF.getText();
         if (d.controller.isExist(removeTerm)) {
             Object[] options = {"OK"};
             if (JOptionPane.showConfirmDialog(null, "Are you sure?", "Confirm removing term",
                     JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
                 d.controller.remove(removeTerm);
                 this.searchGeneral();
-                this.searchTF1.setText(removeTerm);
+                this.wordTF.setText(removeTerm);
                 JOptionPane.showOptionDialog(d, "Your term has been removed! ", "Success!", JOptionPane.PLAIN_MESSAGE, JOptionPane.QUESTION_MESSAGE,
                         null, options, options[0]);
 
@@ -155,13 +155,18 @@ public class ShowResultPanel extends javax.swing.JPanel {
 
     private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonActionPerformed
         // TODO add your handling code here:
+        if (d.controller.isExist(this.wordTF.getText())) {
+            d.add.setWordTF(this.wordTF.getText(), this.definitionTA.getText());
+        } else {
+            d.add.setWordTF(this.wordTF.getText(), "");
+        }
         d.enter(3);
     }//GEN-LAST:event_addButtonActionPerformed
 
     private void editButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editButtonActionPerformed
-        String edit = searchTF1.getText();
+        String edit = wordTF.getText();
         if (d.controller.isExist(edit)) {
-            String term = searchTF1.getText();
+            String term = wordTF.getText();
             String definition = definitionTA.getText();
             d.edit.setterIsi(term, definition);
             d.enter(4);
@@ -185,7 +190,7 @@ public class ShowResultPanel extends javax.swing.JPanel {
 
     public void search(String termSearch) {
         if (d.controller.isExist(termSearch)) {
-            searchTF1.setText(termSearch);
+            wordTF.setText(termSearch);
             List<String> list = d.controller.search(termSearch);
             String res = "";
             for (int i = 0; i < list.size(); i++) {
@@ -198,14 +203,14 @@ public class ShowResultPanel extends javax.swing.JPanel {
 
             this.setNoDefinition(termSearch);
         }
-        this.searchTF1.setText(termSearch);
+        this.wordTF.setText(termSearch);
         searchTF.setText("");
     }
 
     public void searchGeneral() {
         String termSearch = searchTF.getText();
         if (d.controller.isExist(termSearch)) {
-            searchTF1.setText(termSearch);
+            wordTF.setText(termSearch);
             List<String> list = d.controller.search(termSearch);
             String res = "";
             for (int i = 0; i < list.size(); i++) {
@@ -218,7 +223,7 @@ public class ShowResultPanel extends javax.swing.JPanel {
 
             this.setNoDefinition(termSearch);
         }
-        this.searchTF1.setText(termSearch);
+        this.wordTF.setText(termSearch);
         searchTF.setText("");
     }
     private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
@@ -231,9 +236,8 @@ public class ShowResultPanel extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_searchTFKeyPressed
 
-
     public void setNoDefinition(String noDefinition) {
-        this.searchTF1.setText(noDefinition);
+        this.wordTF.setText(noDefinition);
         this.definitionTA.setText("Istilah yang Anda cari tidak dapat ditemukan!");
     }
 
@@ -247,7 +251,7 @@ public class ShowResultPanel extends javax.swing.JPanel {
     }
 
     public String getWord() {
-        return searchTF1.getText();
+        return wordTF.getText();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -262,6 +266,6 @@ public class ShowResultPanel extends javax.swing.JPanel {
     private javax.swing.JButton removeButton;
     private javax.swing.JButton searchButton;
     private javax.swing.JTextField searchTF;
-    private javax.swing.JTextField searchTF1;
+    private javax.swing.JTextField wordTF;
     // End of variables declaration//GEN-END:variables
 }

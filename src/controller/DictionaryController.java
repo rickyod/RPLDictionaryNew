@@ -47,12 +47,8 @@ public class DictionaryController {
     }
 
     public boolean add(String term, ArrayList<String> definition) {
-        if (dict.search(term) == null) {
-            dict.add(term, definition);
-            return true;
-        } else {
-            return false;
-        }
+        dict.add(term, definition);
+        return true;
     }
 
     public boolean isExist(String term) {

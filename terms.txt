@@ -1,7 +1,7 @@
 Antipattern
 -
 Sebuah pattern tertentu dalam pengembangan perangkat lunak yang dianggap pemrograman yang buruk. 
--
+*
 Forces
 -
 Hal yang perlu diperhatikan dan dipertimbangkan saat menyelesaikan sebuah masalah.
@@ -405,6 +405,10 @@ Dokumen yang menjelaskan tentang berbagai kebutuhan yang harus dipenuhi oleh sua
 adaptability
 -
 Adaptasi menyangkut perubahan sistem agar sesuai dengan kebutuhan pengguna tanpa harus mengubah dari satu komputer ke komputer lain
+*
+dede
+-
+dsjkfhjkdshfe
 *
 concurrency
 -

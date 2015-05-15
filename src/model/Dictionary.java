@@ -39,8 +39,7 @@ public class Dictionary {
     
     public void add(String term,ArrayList<String> definition)
     {
-        Term temp=new Term(term, definition);
-        termsMap.put(term.toLowerCase(), temp);
+        termsMap.put(term.toLowerCase(), new Term(term, definition));
     }
     
     public void remove(String t)
@@ -54,7 +53,6 @@ public class Dictionary {
         if(oldTerm==null){
             return false;
         }
-        termsMap.remove(termName);
         termsMap.put(termName.toLowerCase(), new Term(newTermName,newDefinition));
         return true;
     }

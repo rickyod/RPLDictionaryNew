@@ -28,11 +28,12 @@ public class AdminAccountList {
     
     public AdminAccount search(String ID, char[] password) {
         String actualPassword = adminAccounts.get(ID);
-        char[] actPassChar = actualPassword.toCharArray();
-        if(actualPassword!=null && Arrays.equals(actPassChar, password)) {
-            return new AdminAccount(ID, actualPassword);
-        } else {
-            return null;
+        if(actualPassword!=null) {
+            char[] actPassChar = actualPassword.toCharArray();
+            if(actualPassword!=null && Arrays.equals(actPassChar, password)) {
+                return new AdminAccount(ID, actualPassword);
+            }
         }
+        return null;
     }
 }

@@ -54,7 +54,7 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="javax.swing.JTextField" name="searchTF1">
+    <Component class="javax.swing.JTextField" name="wordTF">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
       </Properties>
