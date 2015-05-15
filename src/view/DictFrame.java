@@ -67,6 +67,7 @@ public class DictFrame extends javax.swing.JFrame {
         else if(x == 2){
             show.checkedLogin();
             jPanel1.add(show);
+            show.requestFocus();
         }
         else if(x == 3){
             jPanel1.add(add);

@@ -2,10 +2,6 @@ Antipattern
 -
 Sebuah pattern tertentu dalam pengembangan perangkat lunak yang dianggap pemrograman yang buruk. 
 *
-Forces
--
-Hal yang perlu diperhatikan dan dipertimbangkan saat menyelesaikan sebuah masalah.
-*
 pattern
 -
 solusi umum yang dapat digunakan kembali pada permasalahan umum yang sering terjadi pada software design
@@ -431,6 +427,10 @@ diagram yg mengandung aktivitas, pilihan tindakan, perulangan dan hasil dari akt
 Failure
 -
 Ketidakmampuan sistem atau komponen untuk melaksanakan fungsi-fungsi yang diperlukan dalam kinerja ditentukan
+*
+Forces
+-
+Hal yang perlu diperhatikan dan dipertimbangkan saat menyelesaikan sebuah masalah.
 *
 Computer Aided Software Engineering
 -

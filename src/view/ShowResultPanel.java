@@ -60,6 +60,11 @@ public class ShowResultPanel extends javax.swing.JPanel {
             }
         });
 
+        addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                formKeyPressed(evt);
+            }
+        });
         setLayout(null);
 
         removeButton.setText("Remove");
@@ -231,10 +236,20 @@ public class ShowResultPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_searchButtonActionPerformed
 
     private void searchTFKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_searchTFKeyPressed
+        this.requestFocus();
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             this.searchGeneral();
         }
     }//GEN-LAST:event_searchTFKeyPressed
+
+    private void formKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyPressed
+        this.requestFocus();
+        if (!d.login.isLogin) {
+            if (evt.isControlDown() && evt.isShiftDown() && evt.getKeyCode() == KeyEvent.VK_L) {
+                d.enter(0);
+            }
+        }
+    }//GEN-LAST:event_formKeyPressed
 
     public void setNoDefinition(String noDefinition) {
         this.wordTF.setText(noDefinition);

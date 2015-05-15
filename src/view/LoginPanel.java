@@ -99,15 +99,15 @@ public class LoginPanel extends javax.swing.JPanel {
         char[] pass = passTxtField.getPassword();
         Object[] options = {"OK"};
         if (username.equals("")) {
-            JOptionPane.showOptionDialog(d,"Username / Password salah! ","WARNING",JOptionPane.PLAIN_MESSAGE,JOptionPane.QUESTION_MESSAGE,
-                   null,options,options[0]);
+            JOptionPane.showOptionDialog(d, "Username / Password salah! ", "WARNING", JOptionPane.PLAIN_MESSAGE, JOptionPane.QUESTION_MESSAGE,
+                    null, options, options[0]);
         } else {
             if (d.controller.login(username, pass)) {
                 this.isLogin = true;
                 d.enter(1);
             } else {
-                JOptionPane.showOptionDialog(d,"Username / Password salah! ","WARNING",JOptionPane.PLAIN_MESSAGE,JOptionPane.QUESTION_MESSAGE,
-                   null,options,options[0]);
+                JOptionPane.showOptionDialog(d, "Username / Password salah! ", "WARNING", JOptionPane.PLAIN_MESSAGE, JOptionPane.QUESTION_MESSAGE,
+                        null, options, options[0]);
             }
         }
 
@@ -133,15 +133,15 @@ public class LoginPanel extends javax.swing.JPanel {
             String username = unameTxtField.getText();
             char[] pass = passTxtField.getPassword();
             if (username.equals("")) {
-                JOptionPane.showOptionDialog(d,"Username / Password salah! ","WARNING",JOptionPane.PLAIN_MESSAGE,JOptionPane.QUESTION_MESSAGE,
-                   null,options,options[0]);
+                JOptionPane.showOptionDialog(d, "Username / Password salah! ", "WARNING", JOptionPane.PLAIN_MESSAGE, JOptionPane.QUESTION_MESSAGE,
+                        null, options, options[0]);
             } else {
                 if (d.controller.login(username, pass)) {
                     this.isLogin = true;
                     d.enter(1);
                 } else {
-                   JOptionPane.showOptionDialog(d,"Username / Password salah! ","WARNING",JOptionPane.PLAIN_MESSAGE,JOptionPane.QUESTION_MESSAGE,
-                   null,options,options[0]);
+                    JOptionPane.showOptionDialog(d, "Username / Password salah! ", "WARNING", JOptionPane.PLAIN_MESSAGE, JOptionPane.QUESTION_MESSAGE,
+                            null, options, options[0]);
                 }
             }
         }
