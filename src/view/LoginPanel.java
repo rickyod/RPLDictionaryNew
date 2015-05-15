@@ -2,8 +2,6 @@ package view;
 
 import java.awt.event.KeyEvent;
 import javax.swing.JOptionPane;
-import javax.swing.JPasswordField;
-import javax.swing.JTextField;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -50,6 +48,12 @@ public class LoginPanel extends javax.swing.JPanel {
         jLabel2.setText("Password");
         add(jLabel2);
         jLabel2.setBounds(80, 130, 70, 14);
+
+        unameTxtField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                unameTxtFieldKeyPressed(evt);
+            }
+        });
         add(unameTxtField);
         unameTxtField.setBounds(160, 80, 150, 30);
 
@@ -99,14 +103,14 @@ public class LoginPanel extends javax.swing.JPanel {
         char[] pass = passTxtField.getPassword();
         Object[] options = {"OK"};
         if (username.equals("")) {
-            JOptionPane.showOptionDialog(d, "Username / Password salah! ", "WARNING", JOptionPane.PLAIN_MESSAGE, JOptionPane.QUESTION_MESSAGE,
+            JOptionPane.showOptionDialog(d, "Username / Password salah! ", "WARNING", JOptionPane.PLAIN_MESSAGE, JOptionPane.INFORMATION_MESSAGE,
                     null, options, options[0]);
         } else {
             if (d.controller.login(username, pass)) {
                 this.isLogin = true;
                 d.enter(1);
             } else {
-                JOptionPane.showOptionDialog(d, "Username / Password salah! ", "WARNING", JOptionPane.PLAIN_MESSAGE, JOptionPane.QUESTION_MESSAGE,
+                JOptionPane.showOptionDialog(d, "Username / Password salah! ", "WARNING", JOptionPane.PLAIN_MESSAGE, JOptionPane.INFORMATION_MESSAGE,
                         null, options, options[0]);
             }
         }
@@ -128,24 +132,16 @@ public class LoginPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_backButtonActionPerformed
 
     private void passTxtFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_passTxtFieldKeyPressed
-        Object[] options = {"OK"};
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-            String username = unameTxtField.getText();
-            char[] pass = passTxtField.getPassword();
-            if (username.equals("")) {
-                JOptionPane.showOptionDialog(d, "Username / Password salah! ", "WARNING", JOptionPane.PLAIN_MESSAGE, JOptionPane.QUESTION_MESSAGE,
-                        null, options, options[0]);
-            } else {
-                if (d.controller.login(username, pass)) {
-                    this.isLogin = true;
-                    d.enter(1);
-                } else {
-                    JOptionPane.showOptionDialog(d, "Username / Password salah! ", "WARNING", JOptionPane.PLAIN_MESSAGE, JOptionPane.QUESTION_MESSAGE,
-                            null, options, options[0]);
-                }
-            }
+            this.loginButtonActionPerformed(null);
         }
     }//GEN-LAST:event_passTxtFieldKeyPressed
+
+    private void unameTxtFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_unameTxtFieldKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            this.loginButtonActionPerformed(null);
+        }
+    }//GEN-LAST:event_unameTxtFieldKeyPressed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

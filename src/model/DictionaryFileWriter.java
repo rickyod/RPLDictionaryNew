@@ -16,6 +16,12 @@ import java.util.List;
  */
 public class DictionaryFileWriter {
 
+    /**
+     * Method untuk menuliskan seluruh istilah beserta definisinya masing-masing
+     * ke sebuah file.
+     * @param terms list istilah yang ingin ditulis
+     * @param fileName nama file untuk penulisan seluruh istilah dan definisinya
+     */
     public void writeTermsToFile(List<Term> terms, String fileName) {
         try {
             BufferedWriter bw = new BufferedWriter(new FileWriter(new File(fileName)));

@@ -18,6 +18,12 @@ import java.util.List;
  */
 public class DictionaryFileReader {
     
+    /**
+     * Method untuk membaca seluruh istilah beserta definisi-definisinya dari sebuah file dan
+     * di-ubah formatnya menjadi list yang berisi Term-Term.
+     * @param fileName nama file untuk membaca
+     * @return list berisi Term(s)
+     */
     public List loadTerm(String fileName) {
         try {
             BufferedReader br = new BufferedReader(new FileReader(new File(fileName)));
@@ -58,6 +64,11 @@ public class DictionaryFileReader {
         return null;
     }    
     
+    /**
+     * Method untuk membaca seluruh username dan password admin dari sebuah file.
+     * @param fileName nama file untuk membaca
+     * @return list berisi AdminAccount
+     */
     public List loadAdminAccountList(String fileName) {
         try {
             BufferedReader br = new BufferedReader(new FileReader(new File(fileName)));
@@ -99,6 +110,10 @@ TERM2
 -
 def1
 *
+TERM3
+-
+def1
+*
 *****
 
 */
@@ -106,6 +121,7 @@ def1
 
 
 /*
+
 Format admin:
 NamaID
 Password
@@ -115,4 +131,5 @@ Password
 
 NamaID
 Password
+
 */

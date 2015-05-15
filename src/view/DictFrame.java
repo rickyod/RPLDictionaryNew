@@ -1,11 +1,9 @@
 package view;
 
 import Controller.DictionaryController;
-import static com.sun.java.accessibility.util.AWTEventMonitor.addWindowListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import javax.swing.JFrame;
-import model.DictionaryFileWriter;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -91,6 +89,7 @@ public class DictFrame extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("RPL Dictionary");
 
         jPanel1.setMaximumSize(new java.awt.Dimension(400, 300));
         jPanel1.setMinimumSize(new java.awt.Dimension(400, 300));
