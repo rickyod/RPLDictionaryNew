@@ -127,7 +127,9 @@ public class EditPanel extends javax.swing.JPanel {
             ArrayList<String> definition = new ArrayList<>();
             String[] defs = definitionTA.getText().split("\n");
             for (int i = 0; i < defs.length; i++) {
-                definition.add(defs[i]);
+                if(!defs[i].equals("")) {
+                    definition.add(defs[i]);
+                }
             }
             d.controller.edit(d.show.getWord(), termBaru, definition);
             d.enter(2);

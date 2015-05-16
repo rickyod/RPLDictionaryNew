@@ -117,7 +117,9 @@ public class AddPanel extends javax.swing.JPanel {
         ArrayList<String> definition = new ArrayList<>();
         String[] defs = definitionTA.getText().split("\n");
         for (int i = 0; i < defs.length; i++) {
-            definition.add(defs[i]);
+            if(!defs[i].equals("")) {
+                definition.add(defs[i]);
+            }
         }
         d.controller.add(termBaru, definition);
         d.show.search(termBaru);

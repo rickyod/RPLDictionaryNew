@@ -201,12 +201,11 @@ public class ShowResultPanel extends javax.swing.JPanel {
             String res = "";
             for (int i = 0; i < list.size(); i++) {
                 res += list.get(i);
-                res += "\n";
+                res += "\n\n";
             }
             definitionTA.setText(res);
             definitionTA.setLineWrap(true);
         } else {
-
             this.setNoDefinition(termSearch);
         }
         this.wordTF.setText(termSearch);

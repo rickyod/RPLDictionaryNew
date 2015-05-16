@@ -109,8 +109,8 @@ public class Home extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
-        String search = searchTF.getText();
-        d.show.search(search);
+        String searchWord = searchTF.getText();
+        d.show.search(searchWord);
         this.searchTF.setText("");
         d.enter(2);
     }//GEN-LAST:event_searchButtonActionPerformed
