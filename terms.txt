@@ -328,9 +328,341 @@ Throughput
 -
 Banyaknya pekerjaan yang dapat dikerjakan oleh sistem software dalam satu waktu
 *
-Failure
+Dependency
 -
-Ketidakmampuan sistem atau komponen untuk melaksanakan fungsi-fungsi yang diperlukan dalam kinerja ditentukan
+Sebuah hubungan ketergantungan antara kelas dan kelas lainnya.
+*
+Abstraction
+-
+Sebuah hubungan antara kelas dengan kelas lainnya , dimana kelas yang berada di bawah kelas abstrak menjadi lebih kompleks.
+*
+Application Programming Interface (API)
+-
+Seperangkat rutinitas , protokol , dan alat-alat untuk membangun aplikasi perangkat lunak.
+*
+Object Constraint Language (OCL)
+-
+Sebuah bahasa deklaratif untuk menggambarkan aturan yang berlaku untuk model Unified Modeling Language (UML).
+*
+Unified Modeling Language (UML)
+-
+Bahasa pemodelan di bidang rekayasa perangkat lunak , yang dirancang untuk menyediakan standar untuk memvisualisasikan desain sebuah sistem.
+*
+Antipattern
+-
+Sebuah pattern tertentu dalam pengembangan perangkat lunak yang dianggap pemrograman yang buruk. 
+* 
+Forces
+-
+Hal yang perlu diperhatikan dan dipertimbangkan saat menyelesaikan sebuah masalah.
+*
+Algorithm
+-
+kumpulan dari aturan-aturan yang telah didefinisikan dengan baik untuk solusi ke sebuah masalah dengan langkah yang terbatas
+*
+Computer Aided Software Engineering
+-
+Pengotomasisasian dari methodologi untuk software dan pengembangan sistem untuk mengurangi jumlah pekerjaan yang diulang yang dibutuhkan oleh analis atau developer
+The automation of step by step methodologies for software and system development to reduce the amount of repetitive work required of the analyst or developer
+*
+Documentation
+-
+informasi yang disediakan untuk membantu end-user dalam mengoperasikan
+aplikasi ini, atau membantu para developer untuk menemukan bug atau root dari sebuah method
+*
+Hardware
+-
+peralatan komputer dan device yang digunakan untuk proses, store, atau
+physical computer 
+*
+OS
+-
+software perangkat lunak yang memanage dan mengontrol aktivitas di kompter
+*
+Project
+-
+sebuah usaha yang difokuskan dalam mengebangkan atau memaintain sebuah software atau sistem. 
+*
+Parameter
+-
+sebuah nilai yang diberikan ke sebuah aplikasi untuk mengarahkan peforma
+*
+Pseudocode
+-
+sebuah kombonasi dari bahasa pemograman dan bahasa natural yang digunakan untuk mendefinisikan sebuah algoritma
+*
+Source code
+-
+instruksi pemrograman software yang tertulis dalam sebuah bahasa yang dapat dibaca oleh manusia yang harus ditranslasikan ke bahasa mesin sebelum bisa dieksekusi oleh komputer
+*
+Specification
+-
+dokumentasi yang mendeskripsikan syarat dari software, desain atau karakteristik lain dengan komplit, tepat, dan dapat diverifikasi
+*
+HTML
+-
+sebuah alat programming yang menggunakan HyperText untuk menyambungkan link ke dokumen lain
+*
+Software Quality Assurance
+-
+sebuah proses yang didesain untuk memberikan manajemen dengan visibilitas yang cukup ke proses rekayasa perangkat lunak yang sedang digunakan oleh tim projek
+*
+Requirement
+-
+sebuah kondisi atau kemampuan yang dibutuhkan oleh pengguna untuk menyelesaikan masalah atau mencapai sebuah tujuan
+*
+Operability
+-	
+Kemampuan software secara keseluruhan berjalan dalam kondisi sesuai dengan kebutuhan operasional yang telah ditentukan.
+*
+Obervability
+-
+Kemampuan untuk memberikan informasi tentang pengamatan hasil pengujian dari awal proses hingga proses berakhir.
+*
+Controllability
+-
+Mengontrol keadaan sotware yang diperlukan untuk melakukan pengujian, agar pengujian dapat dioptimalkan.
+*
+Decomposability
+-
+Membagi sebuah pengujian menjadi beberapa bagian yang lebih kecil dengan batasan yang jelas, sehingga masalah dapat lebih cepat terisolasi dan pengujian ulang dapat dilakukan dengan lebih baik.
+*
+Simplicity
+-
+Pengambilan kasus pengujian yang umum dan mencakup garis besar kemampuan operasional perangkat lunak agar waktu pengujiannya singkat.
+*
+Stability
+-
+Sedikit perubahan yang terjadi pada perangkat lunak, sehingga tingkat terganggunya pengujian pun kecil.
+*
+Understandibility
+-
+Kemudahan user untuk mengerti cara penggunaan perangkat lunak melalui buku panduan.
+*
+Risk Mitigation
+-
+Pengambilan langkah-langkah atau keputusan untuk mengurangi risiko.
+*
+Compartmentalization
+-
+Membagi menjadi komponen yang lebih kecil dengan batas yang jelas untuk menyederhanakan tugas.
+*
+Interdependency
+-
+Ketergantungan antar komponen.
+*
+Contigency
+-
+Keadaan di masa depan yang mungkin terjadi, tetapi tidak dapat diprediksi dengan pasti.
+*
+Actuating
+-
+Bekerja sama pada saat pelaksanaan kegiatan untuk mencapai tujuan.
+*
+Portability
+-
+Karakteristik sebuah perangkat lunak jika dapat digunakan pada sistem operasi lain, selain sistem operasi untuk pengerjaan perangkat lunak tersebut tanpa memerlukan perubahan besar pada perangkat lunak.
+*
+Object
+-
+Instansiasi dari kelas yang memiliki atribut dan perilaku
+*
+State
+-
+Sekumpulan atribut dari sebuah objek
+*
+Modularity
+-
+Sebuah konsep untuk memecah program menjadi modul-modul kecil di mana masing-masing modul berinteraksi melalui antarmuka modul
+*
+Encapsulation
+-
+Memisahkan aspek-aspek eksternal yang dapat di akses objek-objek lain dari rincian Implementasi objek itu sendiri
+*
+Inheritance
+-
+Proses dimana kelas yang baru(subclass) dibentuk oleh kelas yang lain(superclass), dimana secara otomatis semua atribut dan method dari superclass di turunkan ke subclass
+*
+Polymorphism
+-
+Kemampuan dari subclass untuk mengubah method superclass nya
+*
+Interview
+-
+Teknik pengumpulan informasi dengan cara memberikan sekumpulan pertanyaan kepada user secara langsung
+*
+Restriction
+-
+Salah satu tujuan dari override untuk membatasi method 
+*
+Optimization
+-
+salah satu tujuan dari override untuk mengoptimalisasi kerja method 
+*
+Closed Paradigm
+-
+Paradigma organisasi dengan struktur hirarki tradisional sehingga membuatnya terlalu birokratis
+*
+SPS (Software Project Scheduling)
+-
+pekerjaan yg mendistribusi perkiraan upaya pada durasi projek dengan cara mengalokasikan upaya pada rekayasa perangkat lunak 
+*
+Cohesion
+-
+keterikatan fungsi-fungsi di dalam suatu modul
+*
+DFD (Data Flow Diagram)
+-
+alat pembuatan model yang memungkinkan profesional sistem untuk menggambarkan sistem sebagai jaringan proses fungsional yang dihubungkan satu sama lain dengan alur data
+*
+Top-down Design
+-
+merupakan teknik pemecahan masalah di mana suatu masalah yang kompleks dibagi-bagi menjadi beberapa struktur hingga unit yang paling kecil, setelah itu kemudian disusun langkah-langkah untuk menyelesaikan masalah secara rinci
+*
+Buttom-up Design
+-
+merupakan teknik pemecahan masalah yang berkebalikan dengan teknik Top-Down di mana penyelesaian masalah dimulai dari hal-hal yang bersifat khusus, kemudian naik ke bagian yang bersifat umum
+*
+Software Engineering
+-
+Proses pemecahan masalah dengan pengembangan sistematis dan evolusi dari sistem perangkat lunak yang besar dengan batasan biaya, waktu, dll. [Leithbridge&Laganiere]
+-
+Sebuah disiplin yang fokus pada pengembangan sistem software berkualitas tinggi yang irit biaya. [Sommerville]
+-
+IEEE: (1) pendekatan yang sistematis, disiplin, dan kuantitatif pada pengembangan, operasi, dan maintenance sebuah perangkat lunak. (2) Studi mengenai pendekatan pada nomor 1.
+*
+Software
+-
+Instruksi (program komputer) yang ketika dieksekusi menghasilkan fitur, fungsi, dan performa yang diinginkan.
+-
+Struktur data yang memungkinkan program memanipulasi informasi.
+-
+Informasi deskriptif dalam bentuk hard copy maupun virtual yang mendeskripsikan cara penggunaan program.
+*
+Custom software
+-
+Tipe perangkat lunak yang dibuat secara khusus untuk memenuhi kebutuhan customer.
+*
+Generic software
+-
+Tipe perangkat lunak yang didesain untuk dijual di pasar terbuka.
+*
+Commercial off the Shelf
+-
+Tipe perangkat lunak yang didesain untuk dijual di pasar terbuka.
+*
+Embedded software
+-
+Tipe perangkat lunak yang tertanam khusus untuk perangkat keras tertentu yang dijual di pasar.
+*
+Legacy software systems
+-
+Sistem perangkat lunak yang sudah sangat tua dan telah secara berkala diubah namun masih dipakai dalam dunia bisnis. 
+*
+Correctness
+-
+Kualitas dimana perangkat lunak melakukan pekerjaannya sesuai dengan yang sudah dispesifikasikan.
+*
+Robustness
+-
+Kualitas dimana perangkat lunak mampu menangani kondisi yang tidak normal bahkan kondisi yang ekstrem.
+*
+Usability
+-
+Kualitas dimana user dapat mempelajari dan menggunakan perangkat lunak dengan cepat dan mudah.
+*
+Efficiency
+-
+Kualitas dimana perangkat lunak secara efektif mampu melaksanakan tugasnya tanpa menghabiskan memory atau CPU time.
+*
+Reliability
+-
+Kualitas dimana perangkat lunak melakukan pekerjaannya tanpa gagal (crash).
+*
+Maintainability
+-
+Kualitas dimana perangkat lunak mudah diubah.
+*
+Reusability
+-
+Kualitas dimana bagian dari perangkat lunak dapat digunakan kembali di project lain agar tidak perlu diprogram ulang.
+*
+SE stakeholders
+-
+sekelompok orang-orang yang turut memengaruhi software engineering mulai dari pembuatan, pengembangan, sampai dengan penggunaan	
+*
+Waterfall
+-
+proses pemodelan dari software yang mengikuti alur proses software tersebut dari awal sampai akhir
+*
+Prototyping
+-
+biasanya digunakan sebagai bagian dari pemodelan proses yang lain, terutama untuk mengidentifikasi software requirements
+*
+Functional Req
+-
+mendeskripsikan apa yang bisa atau harus dilakukan oleh sistem tersebut
+*
+Non functional Req
+-
+mendeskripsikan kualitas software atau sistem, seperti seberapa baik kinerja software tersebut atau seberapa lama respon dari software tersebut	
+*
+Throughput
+-
+banyaknya pekerjaan yang dapat dikerjakan oleh sistem software dalam satu waktu
+*
+Interoperability
+-
+bagaimana sebuah sistem software dapat dioperasikan di platform yang berbeda dengan platform yang digunakan saat pengujian pertama		
+*
+Observation
+-
+teknik mengumpulkan informasi dengan mengamati langsung usernya saat di tempat kerja dan saat melakukan kegiatan sehari-hari
+*
+Brainstroming
+-
+teknik mengumpulkan informasi dengan mengumpulkan ide terlebih dahulu, baik dengan cara voting, menulis keseluruhan ide dan membaginya, maupun dengan pertanyaan	
+*
+Use case
+-
+pendekatan sistematis untuk mendeskripsikan apa yang user harus bisa lakukan dengan sistem software yang dibuat
+*
+Actors
+-
+merupakan user yang memiliki peran saat berinteraksi dengan sistem
+*
+Extension
+-
+digunakan untuk membagi use case menjadi beberapa opsional (saat use case yang satu terjadi, use case yang lain bisa terjadi juga ataupun tidak)
+*
+Inclusion
+-
+untuk menspesifikasi use case yang umumnya merupakan bagian dari satu atau beberapa use case lain
+*
+white box testing
+-
+pengujian yang didasarkan pada pengecekan terhadap detail perancangan, menggunakan struktur kontrol dari desain program secara procedural untuk membagi pengujian ke dalam beberapa kasus pengujian
+*
+black box testing
+-
+pengujian yang dilakukan hanya mengamati hasil eksekusi melalui data uji dan memeriksa fungsional dari perangkat lunak
+*
+software requirement specification
+-
+dokumen yang menjelaskan tentang berbagai kebutuhan yang harus dipenuhi oleh suatu software
+-
+Dokumen yang dibuat oleh developer (pembuat software) setelah menggali informasi dari calon pemakai software
+*
+compatibility
+-
+Kemudahan menggabungkan elemen software dengan elemen software lainnya
+-
+The ability of two or more systems or components to perform their required functions while sharing the same hardware or software environment
+Kemampuan yang dimiliki dua atau lebih sistem atau komponen untuk melakukan fungsi yang diperlukan dengan berbagi hardware atau software yang sama secara sementara
+*
+flexibility
+-
+Menyediakan banyak cara bagi user dan sistem untuk bertukar informasi 
 *
 Embedded software
 -
