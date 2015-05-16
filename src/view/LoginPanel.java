@@ -43,20 +43,25 @@ public class LoginPanel extends javax.swing.JPanel {
         resetButton = new javax.swing.JButton();
         backButton = new javax.swing.JButton();
 
+        setMaximumSize(new java.awt.Dimension(500, 400));
+        setMinimumSize(new java.awt.Dimension(500, 400));
         setLayout(null);
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel2.setText("Password");
         add(jLabel2);
-        jLabel2.setBounds(80, 130, 70, 14);
+        jLabel2.setBounds(140, 190, 70, 15);
 
+        unameTxtField.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         unameTxtField.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 unameTxtFieldKeyPressed(evt);
             }
         });
         add(unameTxtField);
-        unameTxtField.setBounds(160, 80, 150, 30);
+        unameTxtField.setBounds(220, 130, 150, 30);
 
+        loginButton.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         loginButton.setText("Login");
         loginButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -64,20 +69,23 @@ public class LoginPanel extends javax.swing.JPanel {
             }
         });
         add(loginButton);
-        loginButton.setBounds(120, 190, 66, 23);
+        loginButton.setBounds(180, 250, 66, 30);
 
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel1.setText("Username");
         add(jLabel1);
-        jLabel1.setBounds(80, 80, 70, 14);
+        jLabel1.setBounds(140, 140, 70, 15);
 
+        passTxtField.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         passTxtField.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 passTxtFieldKeyPressed(evt);
             }
         });
         add(passTxtField);
-        passTxtField.setBounds(160, 130, 150, 30);
+        passTxtField.setBounds(220, 180, 150, 30);
 
+        resetButton.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         resetButton.setText("Reset");
         resetButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -85,7 +93,7 @@ public class LoginPanel extends javax.swing.JPanel {
             }
         });
         add(resetButton);
-        resetButton.setBounds(200, 190, 70, 23);
+        resetButton.setBounds(260, 250, 70, 30);
 
         backButton.setText("Back");
         backButton.addActionListener(new java.awt.event.ActionListener() {

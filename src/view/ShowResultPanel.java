@@ -60,6 +60,9 @@ public class ShowResultPanel extends javax.swing.JPanel {
             }
         });
 
+        setMaximumSize(new java.awt.Dimension(500, 400));
+        setMinimumSize(new java.awt.Dimension(500, 400));
+        setPreferredSize(new java.awt.Dimension(500, 400));
         addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 formKeyPressed(evt);
@@ -67,6 +70,7 @@ public class ShowResultPanel extends javax.swing.JPanel {
         });
         setLayout(null);
 
+        removeButton.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         removeButton.setText("Remove");
         removeButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -74,8 +78,9 @@ public class ShowResultPanel extends javax.swing.JPanel {
             }
         });
         add(removeButton);
-        removeButton.setBounds(300, 230, 90, 23);
+        removeButton.setBounds(370, 340, 90, 23);
 
+        editButton.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         editButton.setText("Edit");
         editButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -83,24 +88,28 @@ public class ShowResultPanel extends javax.swing.JPanel {
             }
         });
         add(editButton);
-        editButton.setBounds(240, 230, 51, 23);
+        editButton.setBounds(310, 340, 53, 23);
 
         wordTF.setEditable(false);
+        wordTF.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         add(wordTF);
-        wordTF.setBounds(28, 60, 151, 30);
+        wordTF.setBounds(30, 130, 210, 30);
 
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel1.setText("Word");
         add(jLabel1);
-        jLabel1.setBounds(28, 40, 90, 14);
+        jLabel1.setBounds(30, 110, 90, 15);
 
+        searchTF.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         searchTF.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 searchTFKeyPressed(evt);
             }
         });
         add(searchTF);
-        searchTF.setBounds(136, 12, 151, 30);
+        searchTF.setBounds(30, 60, 340, 30);
 
+        searchButton.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         searchButton.setText("Search");
         searchButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -108,8 +117,9 @@ public class ShowResultPanel extends javax.swing.JPanel {
             }
         });
         add(searchButton);
-        searchButton.setBounds(293, 11, 90, 23);
+        searchButton.setBounds(390, 60, 70, 30);
 
+        addButton.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         addButton.setText("Add");
         addButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -117,11 +127,12 @@ public class ShowResultPanel extends javax.swing.JPanel {
             }
         });
         add(addButton);
-        addButton.setBounds(180, 230, 51, 23);
+        addButton.setBounds(250, 340, 55, 23);
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel2.setText("Definition");
         add(jLabel2);
-        jLabel2.setBounds(30, 100, 120, 14);
+        jLabel2.setBounds(30, 180, 120, 15);
 
         logoutButton.setText("Logout");
         logoutButton.addActionListener(new java.awt.event.ActionListener() {
@@ -130,15 +141,16 @@ public class ShowResultPanel extends javax.swing.JPanel {
             }
         });
         add(logoutButton);
-        logoutButton.setBounds(28, 11, 80, 23);
+        logoutButton.setBounds(420, 10, 70, 23);
 
-        definitionTA.setColumns(20);
         definitionTA.setEditable(false);
+        definitionTA.setColumns(20);
+        definitionTA.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         definitionTA.setRows(5);
         jScrollPane1.setViewportView(definitionTA);
 
         add(jScrollPane1);
-        jScrollPane1.setBounds(30, 120, 360, 96);
+        jScrollPane1.setBounds(30, 200, 430, 130);
     }// </editor-fold>//GEN-END:initComponents
 
     private void removeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeButtonActionPerformed
@@ -181,17 +193,6 @@ public class ShowResultPanel extends javax.swing.JPanel {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         d.enter(0);
     }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void logoutButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutButtonActionPerformed
-        d.login.isLogin = false;
-        logoutButton.setVisible(false);
-        addButton.setVisible(false);
-        removeButton.setVisible(false);
-        editButton.setVisible(false);
-        d.home.setLogoutButton(false);
-        d.login.setterLogout("");
-        d.enter(1);
-    }//GEN-LAST:event_logoutButtonActionPerformed
 
     public void search(String termSearch) {
         if (d.controller.isExist(termSearch)) {
@@ -254,6 +255,17 @@ public class ShowResultPanel extends javax.swing.JPanel {
             }
         }
     }//GEN-LAST:event_formKeyPressed
+
+    private void logoutButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutButtonActionPerformed
+        d.login.isLogin = false;
+        logoutButton.setVisible(false);
+        addButton.setVisible(false);
+        removeButton.setVisible(false);
+        editButton.setVisible(false);
+        d.home.setLogoutButton(false);
+        d.login.setterLogout("");
+        d.enter(1);
+    }//GEN-LAST:event_logoutButtonActionPerformed
 
     public void setNoDefinition(String noDefinition) {
         this.wordTF.setText(noDefinition);
