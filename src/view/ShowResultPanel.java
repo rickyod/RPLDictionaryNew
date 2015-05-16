@@ -160,7 +160,7 @@ public class ShowResultPanel extends javax.swing.JPanel {
             if (JOptionPane.showConfirmDialog(null, "Are you sure?", "Confirm removing term",
                     JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
                 d.controller.remove(removeTerm);
-                this.searchGeneral();
+                this.search(searchTF.getText());
                 this.wordTF.setText(removeTerm);
                 JOptionPane.showOptionDialog(d, "Your term has been removed! ", "Success!", JOptionPane.PLAIN_MESSAGE, JOptionPane.QUESTION_MESSAGE,
                         null, options, options[0]);
@@ -211,33 +211,14 @@ public class ShowResultPanel extends javax.swing.JPanel {
         this.wordTF.setText(termSearch);
         searchTF.setText("");
     }
-
-    public void searchGeneral() {
-        String termSearch = searchTF.getText();
-        if (d.controller.isExist(termSearch)) {
-            wordTF.setText(termSearch);
-            List<String> list = d.controller.search(termSearch);
-            String res = "";
-            for (int i = 0; i < list.size(); i++) {
-                res += list.get(i);
-                res += "\n";
-            }
-            definitionTA.setText(res);
-            definitionTA.setLineWrap(true);
-        } else {
-
-            this.setNoDefinition(termSearch);
-        }
-        this.wordTF.setText(termSearch);
-        searchTF.setText("");
-    }
+    
     private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
-        this.searchGeneral();
+        this.search(searchTF.getText());
     }//GEN-LAST:event_searchButtonActionPerformed
 
     private void searchTFKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_searchTFKeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-            this.searchGeneral();
+            this.search(searchTF.getText());
         }
         if (!d.login.isLogin) {
             if (evt.isControlDown() && evt.isShiftDown() && evt.getKeyCode() == KeyEvent.VK_L) {
