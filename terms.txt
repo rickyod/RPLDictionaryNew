@@ -4,17 +4,21 @@ Penjelasan detil dari abstraction.
 -
 Membantu designer untuk memperlihatkan detil dari lowest level dari abstraction.
 *
+Software Project Scheduling
+-
+Pekerjaan yg mendistribusi perkiraan upaya pada durasi projek dengan cara mengalokasikan upaya pada rekayasa perangkat lunak 
+*
 Time-sharing
 -
 Satu komputer yang mampu mendukung banyak user dan meningkatkan keluaran (throughput) dari sistem 
 *
+SPS
+-
+Pekerjaan yg mendistribusi perkiraan upaya pada durasi projek dengan cara mengalokasikan upaya pada rekayasa perangkat lunak 
+*
 Prototyping
 -
 Biasanya digunakan sebagai bagian dari pemodelan proses yang lain, terutama untuk mengidentifikasi software requirements
-*
-Unified Modeling Language
--
-Bahasa pemodelan di bidang rekayasa perangkat lunak , yang dirancang untuk menyediakan standar untuk memvisualisasikan desain sebuah sistem.
 *
 UML
 -
@@ -31,14 +35,6 @@ Sekelompok orang-orang yang turut memengaruhi software engineering mulai dari pe
 Modularity
 -
 Sebuah konsep untuk memecah program menjadi modul-modul kecil di mana masing-masing modul berinteraksi melalui antarmuka modul
-*
-Object Constraint Language
--
-Sebuah bahasa deklaratif untuk menggambarkan aturan yang berlaku untuk model Unified Modeling Language (UML).
-*
-OCL
--
-Sebuah bahasa deklaratif untuk menggambarkan aturan yang berlaku untuk model Unified Modeling Language (UML).
 *
 concurrency
 -
@@ -59,6 +55,10 @@ Menggambarkan interaksi dari beberapa bagian yang berbeda yang terlibat dalam se
 OS
 -
 Software perangkat lunak yang memanage dan mengontrol aktivitas di komputer
+*
+Data Flow Diagram
+-
+Alat pembuatan model yang memungkinkan profesional sistem untuk menggambarkan sistem sebagai jaringan proses fungsional yang dihubungkan satu sama lain dengan alur data
 *
 fork
 -
@@ -136,11 +136,7 @@ Cara dan tingkat dari ketergantungan antara modul software , semakin besar relas
 *
 SRS
 -
-Singkatan dari software requirement specification
--
 Dokumen yang menjelaskan tentang berbagai kebutuhan yang harus dipenuhi oleh suatu software
--
-Dokumen yang dibuat oleh developer (pembuat software) setelah menggali informasi dari calon pemakai software
 *
 Algorithm
 -
@@ -150,17 +146,21 @@ adaptability
 -
 Adaptasi menyangkut perubahan sistem agar sesuai dengan kebutuhan pengguna tanpa harus mengubah dari satu komputer ke komputer lain
 *
-Pseudocode
+API
 -
-Sebuah kombonasi dari bahasa pemograman dan bahasa natural yang digunakan untuk mendefinisikan sebuah algoritma
+Seperangkat rutinitas , protokol , dan alat-alat untuk membangun aplikasi perangkat lunak.
 *
-Software Engineering
+sofTware engineering
 -
 Proses pemecahan masalah dengan pengembangan sistematis dan evolusi dari sistem perangkat lunak yang besar dengan batasan biaya, waktu, dll. [Leithbridge&Laganiere]
 -
 Sebuah disiplin yang fokus pada pengembangan sistem software berkualitas tinggi yang irit biaya. [Sommerville]
 -
 IEEE: (1) pendekatan yang sistematis, disiplin, dan kuantitatif pada pengembangan, operasi, dan maintenance sebuah perangkat lunak. (2) Studi mengenai pendekatan pada nomor 1.
+*
+Pseudocode
+-
+Sebuah kombonasi dari bahasa pemograman dan bahasa natural yang digunakan untuk mendefinisikan sebuah algoritma
 *
 Correctness
 -
@@ -212,7 +212,7 @@ Digunakan untuk membagi use case menjadi beberapa opsional (saat use case yang s
 *
 DFD
 -
-Suatu cara atau metode untuk membuat rancangan sebuah sistem yang mana berorientasi pada alur data yang bergerak pada sebuah sistem
+Alat pembuatan model yang memungkinkan profesional sistem untuk menggambarkan sistem sebagai jaringan proses fungsional yang dihubungkan satu sama lain dengan alur data
 *
 pattern
 -
@@ -259,6 +259,10 @@ Software perangkat lunak yang memanage dan mengontrol aktivitas di komputer
 Use case
 -
 Pendekatan sistematis untuk mendeskripsikan apa yang user harus bisa lakukan dengan sistem software yang dibuat
+*
+OCL
+-
+Sebuah bahasa deklaratif untuk menggambarkan aturan yang berlaku untuk model Unified Modeling Language (UML).
 *
 Reliability
 -
@@ -332,6 +336,10 @@ Embedded software
 -
 Tipe perangkat lunak yang tertanam khusus untuk perangkat keras tertentu yang dijual di pasar.
 *
+Unified Modeling Language
+-
+Bahasa pemodelan di bidang rekayasa perangkat lunak , yang dirancang untuk menyediakan standar untuk memvisualisasikan desain sebuah sistem.
+*
 Decomposability
 -
 Membagi sebuah pengujian menjadi beberapa bagian yang lebih kecil dengan batasan yang jelas, sehingga masalah dapat lebih cepat terisolasi dan pengujian ulang dapat dilakukan dengan lebih baik.
@@ -368,18 +376,6 @@ Reusability
 -
 Kualitas dimana bagian dari perangkat lunak dapat digunakan kembali di project lain agar tidak perlu diprogram ulang.
 *
-Application Programming Interface
--
-Seperangkat rutinitas , protokol , dan alat-alat untuk membangun aplikasi perangkat lunak.
-*
-API
--
-Seperangkat rutinitas , protokol , dan alat-alat untuk membangun aplikasi perangkat lunak.
-*
-SRS
--
-Dokumen yang menjelaskan tentang berbagai kebutuhan yang harus dipenuhi oleh suatu software
-*
 Compartmentalization
 -
 Membagi menjadi komponen yang lebih kecil dengan batas yang jelas untuk menyederhanakan tugas.
@@ -400,13 +396,13 @@ Actors
 -
 Merupakan user yang memiliki peran saat berinteraksi dengan sistem
 *
-Deadlock
--
-Keadaan dimana dua program memegang kontrol terhadap sumber daya yang dibutuhkan oleh program yang lain. Tidak ada yang dapat melanjutkan proses masing-masing sampai program yang lain memberikan sumber dayanya, tetapi tidak ada yang mengalah
-*
 Interdependency
 -
 Ketergantungan antar komponen.
+*
+Deadlock
+-
+Keadaan dimana dua program memegang kontrol terhadap sumber daya yang dibutuhkan oleh program yang lain. Tidak ada yang dapat melanjutkan proses masing-masing sampai program yang lain memberikan sumber dayanya, tetapi tidak ada yang mengalah
 *
 Generic software
 -
@@ -416,6 +412,10 @@ Requirement
 -
 Sebuah kondisi atau kemampuan yang dibutuhkan oleh pengguna untuk menyelesaikan masalah atau mencapai sebuah tujuan
 *
+Object Constraint Language
+-
+Sebuah bahasa deklaratif untuk menggambarkan aturan yang berlaku untuk model Unified Modeling Language (UML).
+*
 Error
 -
 Suatu program tidak dapat bekerja dengan optimal atau program yang salah dalam menjalankan suatu perintah
@@ -423,14 +423,6 @@ Suatu program tidak dapat bekerja dengan optimal atau program yang salah dalam m
 Livelock
 -
 Situasi dimana dua atau lebih proses secara kontinu merubah state sebagai respon tanpa melakukan suatu pekerjaan
-*
-Software Project Scheduling
--
-Pekerjaan yg mendistribusi perkiraan upaya pada durasi projek dengan cara mengalokasikan upaya pada rekayasa perangkat lunak 
-*
-SPS
--
-Pekerjaan yg mendistribusi perkiraan upaya pada durasi projek dengan cara mengalokasikan upaya pada rekayasa perangkat lunak 
 *
 Controllability
 -
@@ -444,17 +436,13 @@ Inclusion
 -
 Untuk menspesifikasi use case yang umumnya merupakan bagian dari satu atau beberapa use case lain
 *
-Data Flow Diagram
--
-Alat pembuatan model yang memungkinkan profesional sistem untuk menggambarkan sistem sebagai jaringan proses fungsional yang dihubungkan satu sama lain dengan alur data
-*
-DFD
--
-Alat pembuatan model yang memungkinkan profesional sistem untuk menggambarkan sistem sebagai jaringan proses fungsional yang dihubungkan satu sama lain dengan alur data
-*
 Commercial off the Shelf
 -
 Tipe perangkat lunak yang didesain untuk dijual di pasar terbuka.
+*
+Application Programming Interface
+-
+Seperangkat rutinitas , protokol , dan alat-alat untuk membangun aplikasi perangkat lunak.
 *
 Specification
 -
