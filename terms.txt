@@ -16,13 +16,13 @@ SPS
 -
 Pekerjaan yg mendistribusi perkiraan upaya pada durasi projek dengan cara mengalokasikan upaya pada rekayasa perangkat lunak 
 *
-Prototyping
--
-Biasanya digunakan sebagai bagian dari pemodelan proses yang lain, terutama untuk mengidentifikasi software requirements
-*
 UML
 -
 Bahasa pemodelan di bidang rekayasa perangkat lunak , yang dirancang untuk menyediakan standar untuk memvisualisasikan desain sebuah sistem.
+*
+Prototyping
+-
+Biasanya digunakan sebagai bagian dari pemodelan proses yang lain, terutama untuk mengidentifikasi software requirements
 *
 Legacy software systems
 -
@@ -138,17 +138,25 @@ SRS
 -
 Dokumen yang menjelaskan tentang berbagai kebutuhan yang harus dipenuhi oleh suatu software
 *
-Algorithm
--
-Kumpulan dari aturan-aturan yang telah didefinisikan dengan baik untuk solusi ke sebuah masalah dengan langkah yang terbatas
-*
 adaptability
 -
 Adaptasi menyangkut perubahan sistem agar sesuai dengan kebutuhan pengguna tanpa harus mengubah dari satu komputer ke komputer lain
 *
+Algorithm
+-
+Kumpulan dari aturan-aturan yang telah didefinisikan dengan baik untuk solusi ke sebuah masalah dengan langkah yang terbatas
+*
 API
 -
 Seperangkat rutinitas , protokol , dan alat-alat untuk membangun aplikasi perangkat lunak.
+*
+Correctness
+-
+Kualitas dimana perangkat lunak melakukan pekerjaannya sesuai dengan yang sudah dispesifikasikan.
+*
+Pseudocode
+-
+Sebuah kombonasi dari bahasa pemograman dan bahasa natural yang digunakan untuk mendefinisikan sebuah algoritma
 *
 sofTware engineering
 -
@@ -157,14 +165,6 @@ Proses pemecahan masalah dengan pengembangan sistematis dan evolusi dari sistem 
 Sebuah disiplin yang fokus pada pengembangan sistem software berkualitas tinggi yang irit biaya. [Sommerville]
 -
 IEEE: (1) pendekatan yang sistematis, disiplin, dan kuantitatif pada pengembangan, operasi, dan maintenance sebuah perangkat lunak. (2) Studi mengenai pendekatan pada nomor 1.
-*
-Pseudocode
--
-Sebuah kombonasi dari bahasa pemograman dan bahasa natural yang digunakan untuk mendefinisikan sebuah algoritma
-*
-Correctness
--
-Kualitas dimana perangkat lunak melakukan pekerjaannya sesuai dengan yang sudah dispesifikasikan.
 *
 Buttom-up Design
 -
@@ -190,13 +190,13 @@ Generalisations
 -
 Sebuah hubungan antara suatu kelas yang menjadi umum dari kelas-kelas yang spesifik.
 *
-join
--
-Jenis konkurensi di mana terdapat banyak transisi yang masuk dan satu transisi keluar
-*
 Interoperability
 -
 Bagaimana sebuah sistem software dapat dioperasikan di platform yang berbeda dengan platform yang digunakan saat pengujian pertama		
+*
+join
+-
+Jenis konkurensi di mana terdapat banyak transisi yang masuk dan satu transisi keluar
 *
 Brainstroming
 -
@@ -396,13 +396,13 @@ Actors
 -
 Merupakan user yang memiliki peran saat berinteraksi dengan sistem
 *
-Interdependency
--
-Ketergantungan antar komponen.
-*
 Deadlock
 -
 Keadaan dimana dua program memegang kontrol terhadap sumber daya yang dibutuhkan oleh program yang lain. Tidak ada yang dapat melanjutkan proses masing-masing sampai program yang lain memberikan sumber dayanya, tetapi tidak ada yang mengalah
+*
+Interdependency
+-
+Ketergantungan antar komponen.
 *
 Generic software
 -
@@ -412,13 +412,13 @@ Requirement
 -
 Sebuah kondisi atau kemampuan yang dibutuhkan oleh pengguna untuk menyelesaikan masalah atau mencapai sebuah tujuan
 *
-Object Constraint Language
--
-Sebuah bahasa deklaratif untuk menggambarkan aturan yang berlaku untuk model Unified Modeling Language (UML).
-*
 Error
 -
 Suatu program tidak dapat bekerja dengan optimal atau program yang salah dalam menjalankan suatu perintah
+*
+Object Constraint Language
+-
+Sebuah bahasa deklaratif untuk menggambarkan aturan yang berlaku untuk model Unified Modeling Language (UML).
 *
 Livelock
 -
