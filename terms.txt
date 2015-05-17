@@ -154,17 +154,25 @@ Correctness
 -
 Kualitas dimana perangkat lunak melakukan pekerjaannya sesuai dengan yang sudah dispesifikasikan.
 *
-Software Engineering
+Pseudocode
+-
+Kumpulan dari aturan-aturan yang telah didefinisikan dengan baik untuk solusi ke sebuah masalah dengan langkah yang terbatas
+*
+API
+-
+Seperangkat rutinitas , protokol , dan alat-alat untuk membangun aplikasi perangkat lunak.
+*
+Correctness
+-
+Kualitas dimana perangkat lunak melakukan pekerjaannya sesuai dengan yang sudah dispesifikasikan.
+*
+sofTware engineering
 -
 Proses pemecahan masalah dengan pengembangan sistematis dan evolusi dari sistem perangkat lunak yang besar dengan batasan biaya, waktu, dll. [Leithbridge&Laganiere]
 -
 Sebuah disiplin yang fokus pada pengembangan sistem software berkualitas tinggi yang irit biaya. [Sommerville]
 -
 IEEE: (1) pendekatan yang sistematis, disiplin, dan kuantitatif pada pengembangan, operasi, dan maintenance sebuah perangkat lunak. (2) Studi mengenai pendekatan pada nomor 1.
-*
-Pseudocode
--
-Sebuah kombonasi dari bahasa pemograman dan bahasa natural yang digunakan untuk mendefinisikan sebuah algoritma
 *
 Buttom-up Design
 -
@@ -264,6 +272,10 @@ OCL
 -
 Sebuah bahasa deklaratif untuk menggambarkan aturan yang berlaku untuk model Unified Modeling Language (UML).
 *
+OCL
+-
+Sebuah bahasa deklaratif untuk menggambarkan aturan yang berlaku untuk model Unified Modeling Language (UML).
+*
 Reliability
 -
 Kualitas dimana perangkat lunak melakukan pekerjaannya tanpa gagal (crash).
@@ -343,12 +355,6 @@ Tipe perangkat lunak yang tertanam khusus untuk perangkat keras tertentu yang di
 Unified Modeling Language
 -
 Bahasa pemodelan di bidang rekayasa perangkat lunak , yang dirancang untuk menyediakan standar untuk memvisualisasikan desain sebuah sistem.
-*
-software requirement specification
--
-Dokumen yang menjelaskan tentang berbagai kebutuhan yang harus dipenuhi oleh suatu software
--
-beh
 *
 Decomposability
 -
