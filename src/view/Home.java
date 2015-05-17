@@ -1,7 +1,6 @@
 package view;
 
 import java.awt.event.KeyEvent;
-import java.util.List;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -108,6 +107,10 @@ public class Home extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * Method yang akan mengganti panel menjadi search panel untuk mencari istilah.
+     * @param evt 
+     */
     private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
         String searchWord = searchTF.getText();
         d.show.search(searchWord);
@@ -115,17 +118,29 @@ public class Home extends javax.swing.JPanel {
         d.enter(2);
     }//GEN-LAST:event_searchButtonActionPerformed
 
+    /**
+     * Method untuk logout.
+     * @param evt 
+     */
     private void logoutButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutButtonActionPerformed
         d.login.isLogin = false;
         d.enter(1);
         d.home.requestFocus();
         logoutButton.setVisible(false);
-        d.login.setterLogout("");
     }//GEN-LAST:event_logoutButtonActionPerformed
 
+    /**
+     * Method untuk memunculkan atau menghilangkan button logout.
+     * @param isVisible 
+     */
     public void setLogoutButton(boolean isVisible) {
         this.logoutButton.setVisible(isVisible);
     }
+    
+    /**
+     * Method saat ingin login menekan ctrl+shift+L.
+     * @param evt 
+     */
     private void formKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyPressed
         if (!d.login.isLogin) {
             if (evt.isControlDown() && evt.isShiftDown() && evt.getKeyCode() == KeyEvent.VK_L) {
@@ -134,6 +149,10 @@ public class Home extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_formKeyPressed
 
+    /**
+     * Method yang akan mengganti panel menjadi show result jika ingin mencari atau menjadi login jika menekan ctrl+shift+L.
+     * @param evt 
+     */
     private void searchTFKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_searchTFKeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             String search = searchTF.getText();
@@ -148,6 +167,9 @@ public class Home extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_searchTFKeyPressed
 
+    /**
+     * Method untuk mengecek login, jika sedang login, akan memunculkan button logout.
+     */
     void checkedLogin() {
         if (d.login.isLogin) {
             logoutButton.setVisible(true);

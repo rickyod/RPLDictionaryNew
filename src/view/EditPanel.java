@@ -86,7 +86,7 @@ public class EditPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(28, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(saveChangesButton)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -119,6 +119,10 @@ public class EditPanel extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * Method untuk menyimpan perubahan yang telah dilakukan.
+     * @param evt 
+     */
     private void saveChangesButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveChangesButtonActionPerformed
         Object[] options = {"OK"};
         if (JOptionPane.showConfirmDialog(null, "Are you sure?", "Confirm editing term",
@@ -142,6 +146,7 @@ public class EditPanel extends javax.swing.JPanel {
 
     }//GEN-LAST:event_saveChangesButtonActionPerformed
 
+    
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         d.enter(2);

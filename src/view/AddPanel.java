@@ -111,6 +111,10 @@ public class AddPanel extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * Method untuk menambahkan istilah baru.
+     * @param evt 
+     */
     private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonActionPerformed
         Object[] options = {"OK"};
         String termBaru = wordTF.getText();
@@ -128,6 +132,10 @@ public class AddPanel extends javax.swing.JPanel {
                    null,options,options[0]);
     }//GEN-LAST:event_addButtonActionPerformed
 
+    /**
+     * Method untuk kembali ke ShowResultPanel.
+     * @param evt 
+     */
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
         // TODO add your handling code here:
         d.enter(2);

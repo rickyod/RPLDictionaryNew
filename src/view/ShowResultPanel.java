@@ -92,6 +92,11 @@ public class ShowResultPanel extends javax.swing.JPanel {
 
         wordTF.setEditable(false);
         wordTF.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        wordTF.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                wordTFKeyPressed(evt);
+            }
+        });
         add(wordTF);
         wordTF.setBounds(30, 130, 210, 30);
 
@@ -147,12 +152,21 @@ public class ShowResultPanel extends javax.swing.JPanel {
         definitionTA.setColumns(20);
         definitionTA.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         definitionTA.setRows(5);
+        definitionTA.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                definitionTAKeyPressed(evt);
+            }
+        });
         jScrollPane1.setViewportView(definitionTA);
 
         add(jScrollPane1);
         jScrollPane1.setBounds(30, 200, 430, 130);
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * Method saat remove button ditekan.
+     * @param evt 
+     */
     private void removeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeButtonActionPerformed
         String removeTerm = wordTF.getText();
         if (d.controller.isExist(removeTerm)) {
@@ -170,6 +184,10 @@ public class ShowResultPanel extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_removeButtonActionPerformed
 
+    /**
+     * Method saat add button ditekan.
+     * @param evt 
+     */
     private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonActionPerformed
         // TODO add your handling code here:
         if (d.controller.isExist(this.wordTF.getText())) {
@@ -180,6 +198,10 @@ public class ShowResultPanel extends javax.swing.JPanel {
         d.enter(3);
     }//GEN-LAST:event_addButtonActionPerformed
 
+    /**
+     * Method saat edit button ditekan.
+     * @param evt 
+     */
     private void editButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editButtonActionPerformed
         String edit = wordTF.getText();
         if (d.controller.isExist(edit)) {
@@ -194,6 +216,10 @@ public class ShowResultPanel extends javax.swing.JPanel {
         d.enter(0);
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    /**
+     * Method untuk melakukan search.
+     * @param termSearch nama istilah yang ingin dicari
+     */
     public void search(String termSearch) {
         if (d.controller.isExist(termSearch)) {
             wordTF.setText(termSearch);
@@ -212,10 +238,18 @@ public class ShowResultPanel extends javax.swing.JPanel {
         searchTF.setText("");
     }
     
+    /**
+     * Method saat searc
+     * @param evt 
+     */
     private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
         this.search(searchTF.getText());
     }//GEN-LAST:event_searchButtonActionPerformed
 
+    /**
+     * Method yang akan mengganti panel menjadi show result jika ingin mencari atau menjadi login jika menekan ctrl+shift+L.
+     * @param evt 
+     */
     private void searchTFKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_searchTFKeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             this.search(searchTF.getText());
@@ -227,6 +261,10 @@ public class ShowResultPanel extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_searchTFKeyPressed
 
+    /**
+     * Method untuk memunculkan panel login.
+     * @param evt 
+     */
     private void formKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyPressed
         this.requestFocus();
         if (!d.login.isLogin) {
@@ -235,7 +273,11 @@ public class ShowResultPanel extends javax.swing.JPanel {
             }
         }
     }//GEN-LAST:event_formKeyPressed
-
+    
+    /**
+     * Method saat logout button ditekan.
+     * @param evt 
+     */
     private void logoutButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutButtonActionPerformed
         d.login.isLogin = false;
         logoutButton.setVisible(false);
@@ -243,15 +285,45 @@ public class ShowResultPanel extends javax.swing.JPanel {
         removeButton.setVisible(false);
         editButton.setVisible(false);
         d.home.setLogoutButton(false);
-        d.login.setterLogout("");
         d.enter(1);
     }//GEN-LAST:event_logoutButtonActionPerformed
 
-    public void setNoDefinition(String noDefinition) {
-        this.wordTF.setText(noDefinition);
+    /**
+     * Method jika menekan ctrl+shift+L saat fokus ada di wordTF.
+     * @param evt 
+     */
+    private void wordTFKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_wordTFKeyPressed
+        if (!d.login.isLogin) {
+            if (evt.isControlDown() && evt.isShiftDown() && evt.getKeyCode() == KeyEvent.VK_L) {
+                d.enter(0);
+            }
+        }
+    }//GEN-LAST:event_wordTFKeyPressed
+
+    /**
+     * Method jika menekan ctrl+shift+L saat fokus ada di definitionTA.
+     * @param evt 
+     */
+    private void definitionTAKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_definitionTAKeyPressed
+        if (!d.login.isLogin) {
+            if (evt.isControlDown() && evt.isShiftDown() && evt.getKeyCode() == KeyEvent.VK_L) {
+                d.enter(0);
+            }
+        }
+    }//GEN-LAST:event_definitionTAKeyPressed
+
+    /**
+     * Method untuk mengubah definitionTA jika definisi tidak ditemukan.
+     * @param termNameNoDefinition 
+     */
+    public void setNoDefinition(String termNameNoDefinition) {
+        this.wordTF.setText(termNameNoDefinition);
         this.definitionTA.setText("Istilah yang Anda cari tidak dapat ditemukan!");
     }
 
+    /**
+     * Method untuk mengecek apakah dalam status login.
+     */
     void checkedLogin() {
         if (d.login.isLogin) {
             logoutButton.setVisible(true);
@@ -261,6 +333,10 @@ public class ShowResultPanel extends javax.swing.JPanel {
         }
     }
 
+    /**
+     * Method untuk mendapatkan apa yang tertulis di word textfield.
+     * @return isi wordTF
+     */
     public String getWord() {
         return wordTF.getText();
     }

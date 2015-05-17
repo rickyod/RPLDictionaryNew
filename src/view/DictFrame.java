@@ -50,7 +50,10 @@ public class DictFrame extends javax.swing.JFrame {
         });
     }
     
-    
+    /**
+     * Method untuk mengubah panel.
+     * @param x digit untuk panel
+     */
     public void enter(int x){
         jPanel1.removeAll();
         jPanel1.revalidate();

@@ -105,6 +105,10 @@ public class LoginPanel extends javax.swing.JPanel {
         backButton.setBounds(10, 10, 55, 23);
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * Method untuk login
+     * @param evt 
+     */
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
         // TODO add your handling code here:
         String username = unameTxtField.getText();
@@ -116,25 +120,28 @@ public class LoginPanel extends javax.swing.JPanel {
         } else {
             if (d.controller.login(username, pass)) {
                 this.isLogin = true;
+                this.resetButtonActionPerformed(null);
                 d.enter(1);
             } else {
                 JOptionPane.showOptionDialog(d, "Username / Password salah! ", "WARNING", JOptionPane.PLAIN_MESSAGE, JOptionPane.INFORMATION_MESSAGE,
                         null, options, options[0]);
             }
         }
-
     }//GEN-LAST:event_loginButtonActionPerformed
 
-    public void setterLogout(String logout) {
-        this.unameTxtField.setText(logout);
-        this.passTxtField.setText(logout);
-    }
-
+    /**
+     * Method untuk menghilangkan semua yang tertulis di textfield.
+     * @param evt 
+     */
     private void resetButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetButtonActionPerformed
         unameTxtField.setText("");
         passTxtField.setText("");
     }//GEN-LAST:event_resetButtonActionPerformed
 
+    /**
+     * Method untuk kembali ke home panel.
+     * @param evt 
+     */
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
         d.enter(1);
     }//GEN-LAST:event_backButtonActionPerformed
